@@ -1,0 +1,38 @@
+{
+  "header": {
+    "correlation_id": 1457875,
+    "service_name": "stream"
+  },
+  "body": {
+    "descricao": "SmartWatch",
+    "valor": 545.00,
+    "loja": "Shoppee",
+    "desconto": 10.00,
+    "valor_total": 535.00
+  },
+
+
+  "header": {
+    "correlation_id": 878787,
+    "service_name": "stream"
+  },
+  "body": {
+    "descricao": "Playstation",
+    "valor": 5545.00,
+    "loja": "Americanas",
+    "desconto": 100.00,
+    "valor_total": 5445.00
+  },
+
+  "header": {
+    "correlation_id": 4875414,
+    "service_name": "stream"
+  },
+  "body": {
+    "descricao": "Notebook Positivo",
+    "valor": 3545.00,
+    "loja": "Americanas",
+    "desconto": 200.00,
+    "valor_total": 3345.00
+  }
+}

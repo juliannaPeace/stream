@@ -12,8 +12,8 @@ spring:
           contentType: application/json
           group: kafka-resilience
           consumer:
-            maxAttemps: 2
-            concurrency: 5
+            maxAttemps: 2 # quantidade máxima de tentativas de leitura da mensagem
+            concurrency: 5 # número de consumidores. Recomendado ser igual ao número de partições
       kafka:
         binder:
           brokers: localhost:9092
