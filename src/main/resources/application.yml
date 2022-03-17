@@ -1,0 +1,27 @@
+server:
+  port: 8065
+
+spring:
+  cloud:
+    stream:
+      function:
+        definition: vendasListener
+      bindings:
+        vendasListener-in-0:
+          destination: vendas
+          contentType: application/json
+          group: kafka-resilience
+          consumer:
+            maxAttemps: 2
+            concurrency: 5
+      kafka:
+        binder:
+          brokers: localhost:9092
+          autoCreateTopics: false #Essa propriedade não funciona
+          autoAddPartitions: false
+        bindings:
+          vendasListener-in-0:
+            consumer:
+              resetOffsets: false # Reseta o offset para valores=true, para ler todas as mensagens
+              startOffset: earliest # latest = últimas mensagens, earliest = primeiras mensagens
+              enableDlq: false
